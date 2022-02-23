@@ -18,16 +18,16 @@ start = "\033[34mSTARTING\033[m"
 print(start.center(30, "="))
 
 #start o jogo
-for matches in range(0, 100):
-   time.sleep(0.1)
+for matches in range(0, 10):
+   time.sleep(5)
    os.system("clear")
    s = "\033[34m%s° PARTIDA\033[m"%(matches+1)
 
    #Adicionar o palpipe
    print(s.center(30, "="))
    for k, v in enumerate(players):
-      #value_input = input("%s falou -> "%(v["name"])).upper()
-      value_input = random.choice(["PAR", "IMPAR"])
+      value_input = input("%s falou -> "%(v["name"])).upper()
+      #value_input = random.choice(["PAR", "IMPAR"])
       if value_input[0] == "P":
          v["guess"] = "PAR"
       elif value_input[0] == "I":
